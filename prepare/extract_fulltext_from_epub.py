@@ -14,7 +14,7 @@ def thtml2text(thtml):
     # print(thtml.decode('utf-8'))
     output = []
     soup = BeautifulSoup(thtml.decode('utf-8'), 'html.parser')
-    captions = soup.find_all('h1', class_='chapterCaption1')
+    captions = soup.find_all('h1')
     for caption in captions:
         # print(caption.text)
         output.append(caption.text)
